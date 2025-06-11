@@ -1,0 +1,1626 @@
+{
+	"info": {
+		"_postman_id": "33d366ba-21e7-4959-a947-687f8e101f30",
+		"name": "Personal_Finance_Tracker.API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28036249"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Account",
+					"item": [
+						{
+							"name": "Login",
+							"item": [
+								{
+									"name": "/api/Account/Login",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"fakeEmail721ba418-1a28-4b43-8f6e-4287cae1f2ca@gmail.com\",\n  \"password\": \"Wolvarine@2\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Account/Login"
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"sit adipisicing non\",\n  \"password\": \"labore proident elit\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{baseUrl}}/api/Account/Login"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Signup",
+							"item": [
+								{
+									"name": "/api/Account/Signup",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"fugiat mollit elit nisi\",\n  \"userName\": \"velit laboris\",\n  \"phoneNumber\": \"sint ullamco adipisi\",\n  \"password\": \"nulla sed\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Account/Signup"
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"email\": \"fugiat mollit elit nisi\",\n  \"userName\": \"velit laboris\",\n  \"phoneNumber\": \"sint ullamco adipisi\",\n  \"password\": \"nulla sed\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{baseUrl}}/api/Account/Signup"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Budget",
+					"item": [
+						{
+							"name": "{ID}",
+							"item": [
+								{
+									"name": "/api/Budget/:ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Budget/:ID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Budget",
+												":ID"
+											],
+											"variable": [
+												{
+													"key": "ID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Budget/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Budget",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Budget/:ID",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Budget/:ID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Budget",
+												":ID"
+											],
+											"variable": [
+												{
+													"key": "ID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Budget/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Budget",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Budget",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -97043744,\n  \"cat_Id\": -84874680,\n  \"limitAmount\": -64017172.44115872\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/Budget"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -97043744,\n  \"cat_Id\": -84874680,\n  \"limitAmount\": -64017172.44115872\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Budget"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Budget",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/Budget"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseUrl}}/api/Budget"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Budget",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -97043744,\n  \"cat_Id\": -84874680,\n  \"limitAmount\": -64017172.44115872\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/Budget"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -97043744,\n  \"cat_Id\": -84874680,\n  \"limitAmount\": -64017172.44115872\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Budget"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "BudgetUser",
+					"item": [
+						{
+							"name": "{idBudget}",
+							"item": [
+								{
+									"name": "/api/BudgetUser/:idBudget",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "laborum",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/BudgetUser/:idBudget",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"BudgetUser",
+												":idBudget"
+											],
+											"variable": [
+												{
+													"key": "idBudget",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "laborum",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/BudgetUser/:idBudget",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"BudgetUser",
+														":idBudget"
+													],
+													"variable": [
+														{
+															"key": "idBudget"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/BudgetUser/:idBudget",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "laborum",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/BudgetUser/:idBudget",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"BudgetUser",
+												":idBudget"
+											],
+											"variable": [
+												{
+													"key": "idBudget",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "laborum",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/BudgetUser/:idBudget",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"BudgetUser",
+														":idBudget"
+													],
+													"variable": [
+														{
+															"key": "idBudget"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/BudgetUser/:idBudget",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/BudgetUser/:idBudget",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"BudgetUser",
+												":idBudget"
+											],
+											"variable": [
+												{
+													"key": "idBudget",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/BudgetUser/:idBudget",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"BudgetUser",
+														":idBudget"
+													],
+													"variable": [
+														{
+															"key": "idBudget"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/BudgetUser",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/BudgetUser"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseUrl}}/api/BudgetUser"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "{ID}",
+							"item": [
+								{
+									"name": "/api/Category/:ID",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Category/:ID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Category",
+												":ID"
+											],
+											"variable": [
+												{
+													"key": "ID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Category/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Category",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Category",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": -88228872,\n  \"name\": \"ex quis cupidatat\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/Category"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": -88228872,\n  \"name\": \"ex quis cupidatat\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Category"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/Category"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseUrl}}/api/Category"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Expense",
+					"item": [
+						{
+							"name": "{ID}",
+							"item": [
+								{
+									"name": "/api/Expense/:ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Expense/:ID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Expense",
+												":ID"
+											],
+											"variable": [
+												{
+													"key": "ID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Expense/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Expense",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "{ExpenID}",
+							"item": [
+								{
+									"name": "/api/Expense/:ExpenID",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Expense/:ExpenID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Expense",
+												":ExpenID"
+											],
+											"variable": [
+												{
+													"key": "ExpenID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Expense/:ExpenID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Expense",
+														":ExpenID"
+													],
+													"variable": [
+														{
+															"key": "ExpenID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "total",
+							"item": [
+								{
+									"name": "/api/Expense/total",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Expense/total?Cat_Id=-51009931",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Expense",
+												"total"
+											],
+											"query": [
+												{
+													"key": "Cat_Id",
+													"value": "-51009931"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Expense/total?Cat_Id=-51009931",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Expense",
+														"total"
+													],
+													"query": [
+														{
+															"key": "Cat_Id",
+															"value": "-51009931"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "date",
+							"item": [
+								{
+									"name": "/api/Expense/date",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Expense/date?CatID=-51009931&fromDate=1987-10-15T13:01:50.004Z&toDate=1987-10-15T13:01:50.004Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Expense",
+												"date"
+											],
+											"query": [
+												{
+													"key": "CatID",
+													"value": "-51009931"
+												},
+												{
+													"key": "fromDate",
+													"value": "1987-10-15T13:01:50.004Z"
+												},
+												{
+													"key": "toDate",
+													"value": "1987-10-15T13:01:50.004Z"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Expense/date?CatID=-51009931&fromDate=1987-10-15T13:01:50.004Z&toDate=1987-10-15T13:01:50.004Z",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Expense",
+														"date"
+													],
+													"query": [
+														{
+															"key": "CatID",
+															"value": "-51009931"
+														},
+														{
+															"key": "fromDate",
+															"value": "1987-10-15T13:01:50.004Z"
+														},
+														{
+															"key": "toDate",
+															"value": "1987-10-15T13:01:50.004Z"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Expense",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 35064576,\n  \"amount\": 22095327.058758497,\n  \"budgetId\": -90940370,\n  \"date_Withdraw\": \"2025-05-20T18:05:57.047Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/Expense"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 35064576,\n  \"amount\": 22095327.058758497,\n  \"budgetId\": -90940370,\n  \"date_Withdraw\": \"2025-05-20T18:05:57.047Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Expense"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Expense",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/Expense"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseUrl}}/api/Expense"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Expense",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 35064576,\n  \"amount\": 22095327.058758497,\n  \"budgetId\": -90940370,\n  \"date_Withdraw\": \"2025-05-20T18:05:57.047Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/Expense"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 35064576,\n  \"amount\": 22095327.058758497,\n  \"budgetId\": -90940370,\n  \"date_Withdraw\": \"2025-05-20T18:05:57.047Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Expense"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Income",
+					"item": [
+						{
+							"name": "{ID}",
+							"item": [
+								{
+									"name": "/api/Income/:ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Income/:ID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Income",
+												":ID"
+											],
+											"variable": [
+												{
+													"key": "ID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Income/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Income",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Income/:ID",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Income/:ID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Income",
+												":ID"
+											],
+											"variable": [
+												{
+													"key": "ID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Income/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Income",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/api/Income/:ID",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 98769977,\n  \"amount\": 75817321.30650577,\n  \"source\": \"officia sit consectetur voluptate\",\n  \"date_Deposite\": \"1958-07-06T05:41:06.038Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Income/:ID",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Income",
+												":ID"
+											],
+											"variable": [
+												{
+													"key": "ID",
+													"value": "-51009931",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"id\": 98769977,\n  \"amount\": 75817321.30650577,\n  \"source\": \"officia sit consectetur voluptate\",\n  \"date_Deposite\": \"1958-07-06T05:41:06.038Z\"\n}",
+													"options": {
+														"raw": {
+															"headerFamily": "json",
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Income/:ID",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Income",
+														":ID"
+													],
+													"variable": [
+														{
+															"key": "ID"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "date",
+							"item": [
+								{
+									"name": "/api/Income/date",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Income/date?fromDate=1987-10-15T13:01:50.004Z&toDate=1987-10-15T13:01:50.004Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Income",
+												"date"
+											],
+											"query": [
+												{
+													"key": "fromDate",
+													"value": "1987-10-15T13:01:50.004Z"
+												},
+												{
+													"key": "toDate",
+													"value": "1987-10-15T13:01:50.004Z"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Income/date?fromDate=1987-10-15T13:01:50.004Z&toDate=1987-10-15T13:01:50.004Z",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Income",
+														"date"
+													],
+													"query": [
+														{
+															"key": "fromDate",
+															"value": "1987-10-15T13:01:50.004Z"
+														},
+														{
+															"key": "toDate",
+															"value": "1987-10-15T13:01:50.004Z"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/api/Income",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": 98769977,\n  \"amount\": 75817321.30650577,\n  \"source\": \"officia sit consectetur voluptate\",\n  \"date_Deposite\": \"1958-07-06T05:41:06.038Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{baseUrl}}/api/Income"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"id\": 98769977,\n  \"amount\": 75817321.30650577,\n  \"source\": \"officia sit consectetur voluptate\",\n  \"date_Deposite\": \"1958-07-06T05:41:06.038Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{baseUrl}}/api/Income"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "/api/Income",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{baseUrl}}/api/Income"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseUrl}}/api/Income"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Report",
+					"item": [
+						{
+							"name": "summary",
+							"item": [
+								{
+									"name": "/api/Report/summary",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{baseUrl}}/api/Report/summary"
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{baseUrl}}/api/Report/summary"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "signalR",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjAwMTk4MjYzLWNmNmQtNDAxNi1hZGQwLTFiYTY3MTgzNDZjOCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJmYWtlRW1haWw3MjFiYTQxOC0xYTI4LTRiNDMtOGY2ZS00Mjg3Y2FlMWYyY2EiLCJqdGkiOiI2YjVhNmMxMS05Yzk5LTRkYjMtODI5MS01ZTZiMmJiNmI0NmIiLCJleHAiOjE3NDk3NDcwOTMsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6NTI0NC8ifQ.8yCe8FaAPpK8SV6jmcdypGetd0xz2HFECwNAPtgJanw"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5244"
+		}
+	]
+}
