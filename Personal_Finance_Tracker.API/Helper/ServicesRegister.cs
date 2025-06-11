@@ -8,6 +8,7 @@ using Microsoft.IdentityModel.Tokens;
 using Repository.MODELS.DATA;
 using Repository.Repositories;
 using Repository.UnitofWork;
+using Services.BackgroundServices;
 using Services.caching;
 using Services.Service;
 using StackExchange.Redis;
@@ -100,6 +101,7 @@ namespace Personal_Finance_Tracker.API.Helper
             Services.AddSingleton<IcacheServices, CacheServices>();
 
             Services.AddScoped<INotificationServices, NotificationServices>();
+            Services.AddHostedService<CleanNotification>();
 
             return Services;
         }

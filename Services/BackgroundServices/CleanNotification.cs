@@ -1,38 +1,53 @@
 ﻿using Core.entities;
+using Core.Interfaces;
 using Core.Specification;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Repository.MODELS.DATA;
-using Repository.UnitofWork;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace Services.BackgroundServices
 {
     public class CleanNotification : BackgroundService
     {
-        private readonly UnitOfWork _unitOfWork;
+        private readonly IServiceProvider _serviceProvider;
+        private readonly ILogger<CleanNotification> _logger;
 
-        public CleanNotification(UnitOfWork unitOfWork)
+        public CleanNotification(IServiceProvider serviceProvider, ILogger<CleanNotification> logger)
         {
-            this._unitOfWork = unitOfWork;
+            _serviceProvider = serviceProvider;
+            _logger = logger;
         }
+
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            await Task.Delay(TimeSpan.FromDays(7), stoppingToken);
-
-            var specs = new BaseSpecification<Notifications>(n => n.CreatedAt <= DateTime.UtcNow.AddDays(-7));
-            var oldNotifications = _unitOfWork.Repository<Notifications>().FindAll(specs);
-
-            if(oldNotifications.Any())
+            while (!stoppingToken.IsCancellationRequested)
             {
-                foreach(var item in oldNotifications)
+                try
                 {
-                    _unitOfWork.Repository<Notifications>().DeleteEntity(item.Id);
+                    using var scope = _serviceProvider.CreateScope();
+                    var unitOfWork = scope.ServiceProvider.GetRequiredService<IUnitOfWork>();
+
+                    var specs = new BaseSpecification<Notifications>(n =>
+                        n.CreatedAt <= DateTime.UtcNow.AddDays(-7));
+
+                    var oldNotifications = unitOfWork.Repository<Notifications>().FindAll(specs);
+
+                    if (oldNotifications.Any())
+                    {
+                        foreach (var item in oldNotifications)
+                        {
+                            unitOfWork.Repository<Notifications>().DeleteEntity(item.Id);
+                        }
+
+                        unitOfWork.SaveChanges();
+                        _logger.LogInformation("Old notifications cleaned successfully.");
+                        await Task.Delay(TimeSpan.FromDays(7), stoppingToken);
+                    }
                 }
-                _unitOfWork.SaveChanges();
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error during notification cleanup.");
+                }
             }
         }
     }

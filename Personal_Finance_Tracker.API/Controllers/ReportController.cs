@@ -16,9 +16,9 @@ namespace Personal_Finance_Tracker.API.Controllers
             this._report = report;
         }
         [HttpGet("summary")]
-        public IActionResult Getsummary()
+        public async Task<IActionResult> Getsummary([FromQuery] DateTime from, [FromQuery] DateTime to)
         {
-            var res = _report.Summary(User);
+            var res = await _report.Summary(User, from, to);
             return Ok(res);
         }
     }

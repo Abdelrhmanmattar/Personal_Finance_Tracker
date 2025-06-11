@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.DTO
+﻿namespace Core.DTO
 {
     public class IncomeDTO
     {
@@ -12,5 +6,9 @@ namespace Core.DTO
         public decimal Amount { get; set; }
         public string Source { get; set; }
         public DateTime Date_Deposite { get; set; }
+        public override string ToString()
+        {
+            return $"[{Id}] for Source:{Source} with amount = {Amount} in {Date_Deposite}";
+        }
     }
 }
